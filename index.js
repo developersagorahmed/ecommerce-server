@@ -33,6 +33,11 @@ async function run() {
 			const result = await ProductsConnection.find().toArray();
 			res.send(result);
 		});
+		app.get("/admin/home/admin/dashboard", async (req, res) => {
+			const result = await ProductsConnection.find().toArray();
+			res.send(result);
+		});
+
 		app.get("/buyProducts", async (req, res) => {
 			const result = await buyProductsConnection.find().toArray();
 			res.send(result);
